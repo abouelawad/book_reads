@@ -3,6 +3,13 @@
       "psr-4" : {
         "Core\\" : "core/",
         "App\\" : "app/"
-      }
+      },
+      "files" : [
+        "env.php",
+        "core/helpers.php",
+        "config/seo.php",
+        "config/urls.php",
+        "config/dirs.php"
+      ]
+    }
   }
-}

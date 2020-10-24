@@ -7,5 +7,5 @@ $route = new Route;
 $num = '([\d]+)';
 $str = '([\w-]+)';
 
-// WEB ROUTES
+// API ROUTES
 // // $route->get("", "HomeController@index");

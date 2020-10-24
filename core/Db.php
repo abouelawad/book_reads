@@ -18,7 +18,7 @@ class Db
 echo "new connection created"; 
     // Create connection
     // $conn = new mysqli($servername, $username, $password ,$dbname);
-    $this->conn = new mysqli("localhost", "root", "" ,"oop_classes");
+    $this->conn = new mysqli(DB_SERVER_NAME, DB_USER_NAME, DB_PASSWORD , DB_DATABASE);
 
     // Check connection
     if ($this->conn->connect_error) {
@@ -40,6 +40,7 @@ echo "new connection created";
 //     }
 //     echo "Connected successfully";
 //   }
+// NOTE //? Applying SINGLETON
 
   public static function getInstance()
   {

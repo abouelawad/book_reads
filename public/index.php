@@ -1,19 +1,14 @@
 <?php
 
-use Core\Request;
-use Core\App;
+// use Core\Request;
+// use Core\App;
 
 require_once "../vendor/autoload.php";
-require_once "../core/Route.php";
-require_once "../routes/web.php";
-require_once "../core/Request.php";
-
-// echo $_SERVER['QUERY_STRING'];
-echo '<br />';
+require_once ROUTES . "web.php";
 
 
-$app = new App();
-
+// $app = new App();
+echo PUBLIC_F;
 
 
 
