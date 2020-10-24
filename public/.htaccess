@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+
+
+#####STACK OVERFLOW  KEYWORD MAP###### 
+# The flags:
+# NC = No Case (not case sensitive, not really necessary since there are no characters in the pattern)
+# L = Last (it'll stop rewriting at after this Rewrite so make sure it's the last thing in your list of rewrites)
+# QSA = Query String Append, just in case you've got something like ?like=penguins on the end which you want to keep and pass to index.php.
