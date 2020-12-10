@@ -2,7 +2,7 @@
 
 // database credentials
 
-define('DB_SERVER_NAME', 'localhost');
-define('DB_USER_NAME', 'root');
+define('DB_SERVERNAME', 'localhost');
+define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
-define('DB_DATABASE', 'book-reads');
+define('DB_DATABASE', 'book_reads');

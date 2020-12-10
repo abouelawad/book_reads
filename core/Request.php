@@ -52,4 +52,14 @@ class Request
       echo "<strong>$key : </strong> $value <br/>";
     }
   }
+
+  public function redirect($path)
+  {
+    header("location:" . URL . $path);
+  }
+
+  public function back()
+  {
+    header("location:" . $_SERVER['HTTP_REFERER']);
+  }
 }

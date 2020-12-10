@@ -1,19 +1,26 @@
-<?php 
-namespace App\Controllers;
+<?php
+
+namespace app\Controllers;
+
+use Core\View;
+use App\Models\Cat;
+use App\Models\Book;
 
 class HomeController
 {
-public function index()
-{
-  echo "hello from main index HomeController";
-}
-public function create()
-{
-  echo "hello from main create HomeController";
-}
-public function store()
-{
-  echo "hello from main store HomeController";
-}
+    public function index()
+    {
+        $data['top_cats'] = Cat::connectTable()
+            ->select("id, name, brief")
+            ->where("is_top", "=", 1)
+            ->get();
 
+        $data['new_books'] = Book::connectTable()
+            ->select("id, img, name, price")
+            ->orderBy("created_at", "DESC")
+            ->limit(6)
+            ->get();
+
+        View::load("web/index", $data);
+    }
 }
